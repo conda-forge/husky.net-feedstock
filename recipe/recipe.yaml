@@ -16,6 +16,7 @@ build:
 requirements:
   host:
     - dotnet
+    - git
     - nuget-license
   run:
     - dotnet
