@@ -10,7 +10,7 @@ source:
   tag: v${{ version }}
 
 build:
-  number: 0
+  number: 1
   noarch: generic
 
 requirements:
