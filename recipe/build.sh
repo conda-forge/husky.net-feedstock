@@ -24,3 +24,5 @@ call %DOTNET_ROOT%\dotnet exec %CONDA_PREFIX%\libexec\husky.net\Husky.dll %*
 EOF
 
 dotnet-project-licenses --input src/Husky/Husky.csproj -t -d license-files
+
+rm ${PREFIX}/bin/dotnet
