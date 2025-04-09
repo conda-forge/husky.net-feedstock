@@ -1,5 +1,5 @@
 context:
-  version: 0.7.0
+  version: 0.7.2
 
 package:
   name: husky.net
@@ -10,20 +10,21 @@ source:
   tag: v${{ version }}
 
 build:
-  number: 1
+  number: 0
   noarch: generic
 
 requirements:
   host:
     - dotnet
     - git
+    - husky
     - nuget-license
   run:
     - dotnet
 
 tests:
   - script:
-      - Husky --help
+      - dotnet-husky --help
 
 about:
   license: MIT
