@@ -5,15 +5,13 @@ set -o xtrace -o nounset -o pipefail -o errexit
 mkdir -p ${PREFIX}/bin
 mkdir -p ${PREFIX}/libexec/${PKG_NAME}
 ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
-ln -sf ${PREFIX}/bin/Husky ${PREFIX}/bin/dotnet-husky
 
 # Build package with dotnet publish
 rm -rf global.json
-rm -rf .config/dotnet-tools.json
+sed -i 's/0.7.0/0.7.2/' .config/dotnet-tools.json
 framework_version="$(dotnet --version | sed -e 's/\..*//g').0"
 dotnet publish --no-self-contained src/Husky/Husky.csproj --output ${PREFIX}/libexec/${PKG_NAME} --framework net${framework_version}
 rm ${PREFIX}/libexec/${PKG_NAME}/Husky
-rm ${PREFIX}/bin/dotnet-husky
 
 # Create bash and batch wrappers
 tee ${PREFIX}/bin/dotnet-husky << EOF
