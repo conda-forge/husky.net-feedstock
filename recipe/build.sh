@@ -8,7 +8,7 @@ ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
 rm -rf global.json
-sed -i 's/0.7.0/0.8.0/' .config/dotnet-tools.json
+sed -i 's/0.7.2/0.8.0/' .config/dotnet-tools.json
 framework_version="$(dotnet --version | sed -e 's/\..*//g').0"
 dotnet publish --no-self-contained src/Husky/Husky.csproj --output ${PREFIX}/libexec/${PKG_NAME} --framework net${framework_version}
 rm ${PREFIX}/libexec/${PKG_NAME}/Husky
