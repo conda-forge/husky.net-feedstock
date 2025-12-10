@@ -1,13 +1,16 @@
 context:
-  version: 0.7.2
+  version: 0.8.0
 
 package:
   name: husky.net
   version: ${{ version }}
 
 source:
-  git: https://github.com/alirezanet/husky.net
-  tag: v${{ version }}
+  - git: https://github.com/alirezanet/husky.net
+    tag: v${{ version }}
+  - url: https://github.com/alirezanet/Husky.Net/archive/refs/tags/v${{ version }}.tar.gz
+    sha256: 220c0c904db99fdb11af84433209e0baf948adcd771186937dc011db41bf6c47
+    target_directory: archive
 
 build:
   number: 0
