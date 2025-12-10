@@ -9,7 +9,7 @@ source:
   - git: https://github.com/alirezanet/husky.net
     tag: v${{ version }}
   - url: https://github.com/alirezanet/Husky.Net/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: ec1933e0fb73cf0517fd007d325603007aa65ce430267a70fc78cfea43d9716e
+    sha256: 220c0c904db99fdb11af84433209e0baf948adcd771186937dc011db41bf6c47
     target_directory: archive
 
 build:
