@@ -7,6 +7,7 @@ mkdir -p ${PREFIX}/libexec/${PKG_NAME}
 ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
+cd git
 rm -rf global.json
 sed -i 's/0.7.0/0.7.2/' .config/dotnet-tools.json
 framework_version="$(dotnet --version | sed -e 's/\..*//g').0"

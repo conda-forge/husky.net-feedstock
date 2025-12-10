@@ -1,13 +1,16 @@
 context:
-  version: 0.7.2
+  version: 0.8.0
 
 package:
   name: husky.net
   version: ${{ version }}
 
 source:
-  git: https://github.com/alirezanet/husky.net
-  tag: v${{ version }}
+  - git: https://github.com/alirezanet/husky.net
+    tag: v${{ version }}
+    target_directory: git
+  - url: https://github.com/alirezanet/Husky.Net/archive/refs/tags/v${{ version }}.tar.gz
+    sha256: ec1933e0fb73cf0517fd007d325603007aa65ce430267a70fc78cfea43d9716e
 
 build:
   number: 0
@@ -29,7 +32,7 @@ about:
   license: MIT
   license_file:
     - LICENSE
-    - license-files/
+    - git/license-files/
   summary: Git hooks made easy with Husky.Net internal task runner!
   homepage: https://github.com/alirezanet/husky.net
   repository: https://github.com/alirezanet/husky.net
