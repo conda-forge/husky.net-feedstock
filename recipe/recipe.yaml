@@ -1,5 +1,5 @@
 context:
-  version: 0.8.0
+  version: "0.9.1"
 
 package:
   name: husky.net
@@ -9,7 +9,7 @@ source:
   - git: https://github.com/alirezanet/husky.net
     tag: v${{ version }}
   - url: https://github.com/alirezanet/Husky.Net/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 220c0c904db99fdb11af84433209e0baf948adcd771186937dc011db41bf6c47
+    sha256: 65830c55b2942bb8221ff46fa7cc141fe36531b7530cb1bdd12a3f8cf5c9d970
     target_directory: archive
 
 build:
